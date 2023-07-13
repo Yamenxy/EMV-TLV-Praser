@@ -1,1 +1,6 @@
-# EMV-TLV-Praser  --> This Program Take The EMV Data From The User and Return The Tag, The Leggth, and The Value
+# Hi, I'm Yamen! 👋
+
+
+# EMV TLV Praser
+
+This Program Take The EMV Data From The User and Print The Tag, The Length,and The Value 
