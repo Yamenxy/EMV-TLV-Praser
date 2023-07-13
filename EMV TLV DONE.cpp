@@ -111,40 +111,19 @@ r:
         c++;
     }
 
-     for (int i = 0; i <= 2; i++) {
-    if (data2[i] != 'A' && data2[i] != 'B' && data2[i] != 'C' && data2[i] != 'D' && data2[i] != 'E' && data2[i] != 'F' && data2[i] != 'a' && data2[i] != 'b' && data2[i] != 'c' && data2[i] != 'd' && data2[i] != 'e' && data2[i] != 'f' && data2[i] > '9')
+     for (int i = 0; i <=c; i++)
     {
-        x++;
-    }
-    }
-    if (x != 0) {
-        printf("THE TAG MUST BE HEX NUMBER!\a\n");
-        goto r;
-    }
-
-    for (int i = 3; i <= 4; i++) {
-    if (data2[i] != 'A' && data2[i] != 'B' && data2[i] != 'C' && data2[i] != 'D' && data2[i] != 'E' && data2[i] != 'F' && data2[i] != 'a' && data2[i] != 'b' && data2[i] != 'c' && data2[i] != 'd' && data2[i] != 'e' && data2[i] != 'f' && data2[i] > '9')
-    {
-        x++;
-    }
-    }
-    if (x != 0) {
-        printf("THE LENGTH MUST BE HEX NUMBERS!\a\n");
-        goto r;
-    }
-
-    for (int i = 5; i <= c; i++) {
-    if (data2[i] != 'A' && data2[i] != 'B' && data2[i] != 'C' && data2[i] != 'D' && data2[i] != 'E' && data2[i] != 'F' && data2[i] != 'a' && data2[i] != 'b' && data2[i] != 'c' && data2[i] != 'd' && data2[i] != 'e' && data2[i] != 'f' && data2[i] > '9')
-    {
-        x++;
-    }
-    }
-
-    if (x != 0) {
-        printf("THE VALUE MUST BE HEX NUMBERS!\a\n");
-        goto r;
-    }
-
+         if(data2[i]>'f' && data2[i]>'9')
+         {
+             x++;
+         }
+     }
+      if (x != 0)
+        {
+            printf("INVALID!\a\n");
+            goto r;
+        }
+      
      else
     {
         if (c % 2 != 0)
