@@ -91,10 +91,11 @@ int main()
 {
     char data2[1000];
     int c = 0,x=0;
-r:
-    y:
+
+    while(1)
+        {
     c = 0;
-    x=0;
+    x = 0;
     printf("Enter The Data(WITHOUT SPACE): ");
     gets(data2);
     for (int i = 0; data2[i] != '\0'; i++)
@@ -102,7 +103,7 @@ r:
         if(data2[i]==' ')
         {
             printf("INVALID INPUT!\a\n");
-            goto r;
+            break;
         }
     }
 
@@ -121,7 +122,7 @@ r:
       if (x != 0)
         {
             printf("INVALID!\a\n");
-            goto r;
+            continue;
         }
       
      else
@@ -129,14 +130,14 @@ r:
         if (c % 2 != 0)
     {
         printf("INVALID DATA!\a\n");
-        goto r;
+        continue;
     }
     else
     {
         TLVEntry* tlv = parseTLV(data2, c );
         if (tlv==-1)
         {
-            goto y;
+            continue;
         }
         printTLVEntries(tlv, c );
 
@@ -150,5 +151,6 @@ r:
 
     }
     }
+        }
     return 0;
 }
